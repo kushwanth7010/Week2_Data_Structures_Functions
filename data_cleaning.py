@@ -1,10 +1,14 @@
 # Data Cleaning using Python Data Structures
 
 def remove_duplicates(data_list):
-    return list(set(data_list))
+    """Return unique hashable values, preserving their first-seen order."""
+    return list(dict.fromkeys(data_list))
+
 
 def filter_data(data_list, threshold):
+    """Return values greater than or equal to the given threshold."""
     return [item for item in data_list if item >= threshold]
+
 
 if __name__ == "__main__":
     data = [10, 20, 20, 30, 40, 10, 50, 60, 30]
